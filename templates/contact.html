@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block body_class %}contact{% endblock %}
+
+{% block header%}
+    <h1>Q-Vault</h1>
+{% endblock %}
+
+{% block base_content%}
+    <div class="contactForm">
+	<h2>Apply for an Invitation</h2>
+	<form action="/contact/" method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<button type="submit">Join Invite List</button>
+	</form>
+    </div>
+    <div class="sidebar">
+	<h3>Serious about Relationships</h3>
+	<p>We are a members-only introduction service. Q-VAULT is for gays and lesbians ready for commitment and self-discovery. We are not a hook-up site.</p>
+	
+	<h3>Serious about discretion and Privacy</h3>
+	<p>Only other members can have access to your profile. We personally interview every member to ensure you only meet others who are serious about relationships like you.</p>
+	
+	<h3>Seriously local</h3>
+	<p>Q-VAULT is based in Columbus, OH and currently only accepts membership applications from central Ohio gays and lesbians. Date people who live near you, so you can get serious.</p>
+    </div>
+    
+{% endblock %}
