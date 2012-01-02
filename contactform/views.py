@@ -28,6 +28,13 @@ def contact(request):
             from django.core.mail import send_mail
             send_mail(subject, message, sender, recipients, fail_silently=False)
             new_contact = form.save()
+            
+            #also send notifications to staff
+            staff_subject = 'Someone applied to Q-Vault! Woo!'
+            staff_message = 'Hey there! Looks like someone applied to be a member of Q-Vault. You should reply as soon as you can. Ready? Set? GO!\nThe applicant\'s info follows.\nName: ' + first_name + ' ' + last_name + '\nEmail: ' + email + '\nPhone: ' + phone 
+            staff_recipients = [ 'jason@q-vault.com', 'nicci@q-vault.com' ]
+            send_mail(staff_subject, staff_message, sender, staff_recipients, fail_silently=False)
+            
             return HttpResponseRedirect('/thanks/')
     else:
         form = ContactForm()
