@@ -21,7 +21,7 @@ def contact(request):
             phone = form.cleaned_data['phone']
         
             subject = 'Thanks'
-            message = 'Hi ' + first_name + ', \nThanks for applying to be a member of Q-Vault! \nThis email isn\'t from an actual human, I am just some software. I am just letting you know that one of our experienced staff (a human!) will contacting you within the next 24 hours. Be very excited, Q-Vault is pretty awesome and some it\'s awesomeness will probably rub off on you.'
+            message = 'Hi ' + first_name + ', \nThanks for applying to be a member of Q-Vault! \nThis email isn\'t from an actual human, I am just some software. My only job is to let you know that one of our experienced staff (a human!) will be contacting you within the next 24 hours. Be very excited, Q-Vault is pretty awesome and some it\'s awesomeness will probably rub off on you.'
             sender = 'info@q-vault.com'
             recipients = ['jason.gonzales23@gmail.com' , email ]
         
