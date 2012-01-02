@@ -21,9 +21,9 @@ def contact(request):
             phone = form.cleaned_data['phone']
         
             subject = 'Thanks for Applying to Q-Vault'
-            message = 'Hi ' + first_name + ', \nThanks for applying to be a member of Q-Vault! \nThis email isn\'t from an actual human, I am just some software. My only job is to let you know that one of our experienced staff (a human!) will be contacting you within the next 24 hours. Be very excited, Q-Vault is pretty awesome and some it\'s awesomeness will probably rub off on you. \nCheers!\nThe Q-Vault Bot'
+            message = 'Hi ' + first_name + ', \nThanks for applying to be a member of Q-Vault! \nThis email isn\'t from an actual human, I am just some software. My only job is to let you know that one of our experienced staff (a human!) will be contacting you within the next 24 hours. Be very excited, Q-Vault is awesome. \nCheers!\nThe Q-Vault Bot'
             sender = 'info@q-vault.com'
-            recipients = ['jason.gonzales23@gmail.com' , email ]
+            recipients = [ email ]
         
             from django.core.mail import send_mail
             send_mail(subject, message, sender, recipients, fail_silently=False)
