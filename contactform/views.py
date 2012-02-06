@@ -43,4 +43,3 @@ def contact(request):
         {'form': form,},
         context_instance=RequestContext(request)
     )
-

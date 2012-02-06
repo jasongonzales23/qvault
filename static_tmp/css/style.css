@@ -88,33 +88,49 @@ body {
     margin:0 auto;
 }
 
-.contact, .thanks {
+.contact, .thanks, .about-us {
     font-family: 'LeagueGothicRegular';
     padding:0 0 100px 0;
 }
 
-.contact header, .thanks header {
+.contact header, .thanks header, .about-us header {
     background:url(../img/bg_header.png) 33% 0 repeat-x;
+    overflow:hidden;
 }
 
 
-.contact h1, .thanks h1 {
+.contact h1, .thanks h1, .about-us h1 {
     font-size:222px;
     margin:0;
     line-height:1em;
     text-transform:uppercase;
     color:#e4cef1;
     background:url(../img/bg_h1.png) 0 24px no-repeat;
+    float:left;
 }
 
-.contact .contactForm, .thanks .thanksMsg {
+.contact .contactForm, .thanks .thanksMsg, .main-content {
     width:500px;
     float:left;
 }
 
+.about-us .main-content {
+    width:600px;
+}
 
+.about-us img {
+    margin:0 0 20px 0;
+}
 
-.contactForm h2, .thanksMsg h2 {
+.about-us p {
+    float: right;
+    width: 410px;
+    margin: 0;
+    font-family: 'Trebuchet MS';
+    font-size: 12px;
+}
+
+.contactForm h2, .thanksMsg h2, .about-us h2 {
     color:#2F1542;
     background:#756282;
     text-transform:uppercase;
@@ -123,7 +139,7 @@ body {
     margin:0;
 }
 
-.thanksMsg h2 {
+.thanksMsg h2, .about-us h2 {
     text-align:left;
     margin:0 0 18px 0;
     padding: 0 0 0 12px;
@@ -192,7 +208,6 @@ body {
     -webkit-box-shadow: 0 0 15px #111;
     -moz-box-shadow: 0 0 15px #111;
     box-shadow: 0 0 15px #111;
-        
 }
 
 .contact .errorlist {
@@ -209,26 +224,35 @@ body {
     margin: 0 30px 0 0;
 }
 
-.contact .sidebar h3, .thanks h3 {
+.contact .sidebar h3, .thanks h3, header h3, .about-us .main-content h3 {
     text-transform:uppercase;
     font-size:24px;
     color:#776386;
     margin:0;
-    
 }
 
+.about-us .main-content h3 {
+    color:#fff;
+}
+
+header h3 {
+    float:right;
+    margin:20px;
+}
+
+header a, header a:visited {
+    text-decoration:none;
+    color:inherit;
+}
+
+header a:hover {
+    color:#E4CEF1;
+}
 .contact .sidebar p, .thanks p {
     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Tahoma, sans-serif;
     margin:0 0 30px 0;
     font-size:15px;
 }
-
-
-
-
-
-
-
 
 /* ==|== non-semantic helper classes ======================================== */
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }

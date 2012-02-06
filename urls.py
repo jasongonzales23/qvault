@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^index/$', contact),
     url(r'^contact/$', contact),
     url(r'^thanks/$', direct_to_template, {'template': 'thanks.html'}),
+    url(r'^about-us/$', direct_to_template, {'template': 'about-us.html'}),
 )
 
 if settings.DEBUG:

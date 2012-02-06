@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block body_class %}about-us{% endblock %}
+
+{% block header%}
+    <h1>Q-Vault</h1>
+    <h3><a href="/">Home</a></h3>
+{% endblock %}
+
+{% block base_content%}
+<div class="main-content">
+    <h2>About Us</h2>
+    
+    <h3>Joel Diaz</h3>
+    <img src="{{ STATIC_URL }}img/joel.png" alt="Joel Diaz"/>
+    <p>Joel Diaz is a local fixture in the LGBT community in Columbus, as a volunteer and organizer he has been involved with a variety of community-based organizations. The Columbus AIDS Task Force, Equality Ohio, the Hispanic Chamber of Columbus, the Human Rights Campaign Columbus Steering Committee, the Wexner Center for the Arts and the Ohio State University are some of the organizations he has worked with and from which he has built a vast network of diverse individuals. Joel is the consummate relationship manager working to help build connections while working to fulfill his passion for social justice and commitment to the fight for human equality.</p>
+    
+    <h3>Nicci Sprouse</h3>
+    <img src="{{ STATIC_URL }}img/nicci.png" alt="Nicci Sprouse"/>
+    <p>Nicci Sprouse is a local dating guru bringing a plethora of professional experience to the dating table. Having been a Millionaire Matchmaker and now the owner of a thriving Introduction Service, Nicci has interviewed hundreds of sought-after singles, hand-selecting those must-meet men and women for personal introductions. Using her unique and instinctive skills as a relationship builder, Nicci has helped facilitate many happy relationships. Taking her dating expertise one step further, Nicci also answers those complex dating and relationship questions in her dating advice column, Ask Nicci, in Columbus ALIVE.</p>
+    <h3>Jason Gonzales</h3>
+    <img src="{{ STATIC_URL }}img/jason.png" alt="Jason Gonzales"/>
+    <p>Jason Gonzales is a web developer, designer and a committed ally. In his former professional life he was a high school English teacher who facilitated a Gay Straight Alliance and participated in a Teacher Inquiry Group that focused on LGBT activism in the classroom. Jason contributed a chapter to the award-winning book <em>Acting Out!: Combating Homophobia Through Teacher Activism</em>. Q-Vault is an extension of his belief that all individuals deserve love and dignity.</p>
+    
+</div>
+{% endblock %}
