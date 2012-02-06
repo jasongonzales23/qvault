@@ -13,7 +13,7 @@ class Contact(models.Model):
     first_name= models.CharField(max_length=255)
     last_name= models.CharField(max_length=255)
     email= models.EmailField(max_length=255)
-    phone= models.CharField(max_length=11, blank=True)
+    phone= models.CharField(max_length=30, blank=True)
     i_am= models.CharField(max_length=30)
     
     def __unicode__(self):
