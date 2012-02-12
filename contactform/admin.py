@@ -6,7 +6,7 @@ class FollowUpAdminInline(admin.StackedInline):
     model = FollowUp
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('first_name', 'last_name', 'email', 'phone', 'i_am', 'contacted')
+    list_display = ('first_name', 'last_name', 'email', 'phone', 'i_am', 'application_date','contacted')
     
         
     def contacted(self, obj):

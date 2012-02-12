@@ -3,6 +3,7 @@ from django.forms import ModelForm
 from django import forms
 from django.forms.fields import DateField, ChoiceField, MultipleChoiceField
 from django.forms.widgets import RadioSelect, CheckboxSelectMultiple
+from datetime import datetime
 
 ORIENTATION_CHOICES = (
     ('gay', 'Gay'),
@@ -15,6 +16,7 @@ class Contact(models.Model):
     email= models.EmailField(max_length=255)
     phone= models.CharField(max_length=30, blank=True)
     i_am= models.CharField(max_length=30)
+    application_date= models.DateTimeField(auto_now_add=True)
     
     def __unicode__(self):
         return u'%s' % (self.first_name)
