@@ -9,7 +9,7 @@ class Migration(SchemaMigration):
     def forwards(self, orm):
         
         # Adding field 'Contact.application_date'
-        db.add_column('contactform_contact', 'application_date', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, default=datetime.datetime(2012, 2, 12, 14, 42, 41, 322737), blank=True), keep_default=False)
+        db.add_column('contactform_contact', 'application_date', self.gf('django.db.models.fields.DateTimeField')(auto_now_add=True, default=datetime.datetime(2012, 2, 12, 14, 57, 30, 403299), blank=True), keep_default=False)
 
 
     def backwards(self, orm):
