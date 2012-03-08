@@ -17,7 +17,7 @@ class ContactAdmin(admin.ModelAdmin):
         return this
     contacted.admin_order_field = 'i_am'
     
-    list_filter = ('i_am',)
+    list_filter = ('i_am','status')
 
     
     inlines = [
