@@ -9,6 +9,13 @@ ORIENTATION_CHOICES = (
     ('gay', 'Gay'),
     ('lesbian', 'Lesbian')
 )
+
+STATUS = (
+    ('inactive', 'Inactive'),
+    ('active', 'Active'),
+    ('in_process', 'In Process'),
+    ('client', 'Client')
+)
     
 class Contact(models.Model):
     first_name= models.CharField(max_length=255)
@@ -17,7 +24,7 @@ class Contact(models.Model):
     phone= models.CharField(max_length=30, blank=True)
     i_am= models.CharField(max_length=30)
     application_date= models.DateTimeField(auto_now_add=True)
-    
+    status = models.CharField(max_length=255, choices= STATUS, default="active")
     def __unicode__(self):
         return u'%s' % (self.first_name)
 
@@ -37,6 +44,4 @@ class FollowUp(models.Model):
     
     def __unicode__(self):
         return u'%s' % (self.date)
-    
-    
     
